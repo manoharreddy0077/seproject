@@ -1,0 +1,30 @@
+.allcanteens{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    align-items: stretch;
+}
+.c1,.c2,.c3{
+    flex: 0.8;
+    margin-left: 30px;
+    margin-right:20px;
+    background-color: yellowgreen;
+    height: 400px;
+    margin-top: 160px;
+    margin-bottom: 50px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+.menu > *{
+    margin: 10px;
+    padding: 10px;
+}
+.menu> button{
+    width: 120px;
+    justify-content: center;
+    align-self: center;
+}
+

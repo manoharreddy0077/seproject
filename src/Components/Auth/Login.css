@@ -1,0 +1,47 @@
+.loginform{
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    padding: 50px;
+    height: 270px;
+}
+.username{
+    margin: 10px;
+}
+.username > label{
+    font-size: 22px;
+}
+.username>input{
+    margin: 10px;
+    height: 25px;
+    width: 200px;
+    box-shadow: 0 0 10px 0 black;
+    border: None;
+}
+.password{
+    margin: 8px;
+}
+.password > label{
+    font-size: 22px;
+}
+.password>input{
+    margin-left: 18px;
+    height: 25px;
+    width: 200px;
+    box-shadow: 0 0 10px 0 black;
+    border: None;
+}
+.loginbutton>button{
+    color: whitesmoke;
+    margin-top:20px ;
+    margin-left: 140px;
+    background-color: red;
+    width: 80px;
+    height: 30px;
+    border: None;
+}
+.loginform > h2{
+    margin-bottom: 5px;
+    margin-left: 15px;
+
+}
