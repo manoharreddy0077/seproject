@@ -21,10 +21,14 @@ app.use(cors());
 
 const User = require('./models/UserModel'); // Update the import path
 
-
 // Load auth router
 const authRouter = require('./routes/auth');
+const menuRouter=require('./routes/menu');
+
+app.use('/api',menuRouter)
 app.use('/api', authRouter);
+
+
 
 // Start server
 app.listen(port,()=>{
