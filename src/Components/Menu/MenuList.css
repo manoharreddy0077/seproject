@@ -46,6 +46,11 @@
     padding-top: 10px;
     box-shadow: 0 0 8px 5px blue;
 }
+/* // to make the selected item which is in cart to backgrounf color skyblue */
+.eachitem.selected {
+    background-color: skyblue;
+    /* Add any other styling you want for the selected item */
+  }
 
 
 .cart{

@@ -16,6 +16,7 @@ const MenuList = () => {
 const handleQuantityChange =(itemId,action,Item,Price)=>{
     if(action==='+')
     {
+          
           if(quantities[itemId]>=0 && quantities[itemId]<20)
           {
               setQuantities((prevQuantities)=>({
@@ -122,17 +123,14 @@ const renderMenuItems=()=>{
     </tr>
     </thead>
     <tbody className='ipq'>
-
-
     <div className="menuitems">
       {menuData.map((item)=>(
-        <tr key={item._id} className='eachitem'>
+        <tr key={item._id} className={`eachitem ${quantities[item._id] > 0 ? 'selected' : ''}`} >
           <td>{item.Item}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
           <td>Rs.{item.Price}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
           {/* <td>{item.Quantity}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> */}
-
           <button  className='orderbtn' onClick={()=>handleQuantityChange(item._id,'+',item.Item,item.Price)}>+</button>
-                  {/* <p className='orderquan'>{quantities[item._id]}</p> */}
+                  <p className='orderquan'>{quantities[item._id]}</p>
           <button className='orderbtn' onClick={()=>handleQuantityChange(item._id,'-',item.Item,item.Price)}>-</button>
         </tr> 
       ))}
@@ -177,5 +175,6 @@ const renderMenuItems=()=>{
 };
 
 export default MenuList;
+
 
 
