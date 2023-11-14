@@ -1,0 +1,37 @@
+.paymentdisplay{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.debitcard,.creditcard,.upi{
+    flex: 1;
+}
+.upi >h3{
+    
+}
+.pay{
+    height: 100%;
+    background-color: grey;
+}
+.totalprice{
+    font-size: 42px;
+    color: black;
+    border: 10px solid black;
+}
+.paymentmode{
+    font-size: 32px;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    
+}
+.btns > *{
+    flex: 0.40;
+    height: 30px;
+    border: 2px solid skyblue;
+    color: navy;
+    font-size: 14px;
+    font-weight: bold;
+}
