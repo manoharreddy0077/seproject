@@ -3,9 +3,14 @@ import React from 'react'
 import './MenuList.css'
 import { useState } from 'react'
 import Cart from './Cart'
+import { useLocation } from 'react-router-dom';
+// import {profilepic} from './profilepic.webp'
 
 const MenuList = () => {
+  const location=useLocation();
 
+  const username=new URLSearchParams(location.search).get('username');
+  const email=new URLSearchParams(location.search).get('email')
   // const [quan,setQuan]=useState(0);
   const [Canteen,setCanteen]=useState('');
   const[menuData,setMenuData]=useState([]);
@@ -141,6 +146,12 @@ const renderMenuItems=()=>{
 }
   return (
     <div className='allcanteens'>
+      {/* <div className='profile'>
+       <p className='email'>Email Id:{email}</p>
+      <p className='username'>User Name :{username}</p>
+      <img src={require('./profilepic.webp')} alt='one image' className='profileimg' /> */}
+
+    {/* </div> */}
       <div className="canteensdisplay">
             <div className="c1 menu">
                 <h2>Canteen-1</h2>

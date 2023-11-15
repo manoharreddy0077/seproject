@@ -37,7 +37,7 @@ const handleSubmit=async(e)=>{
     if (response.ok) {
       setIsLoggedIn(true);
       // alert('You are now on the canteen page');
-      navigate('/Canteens');
+      navigate(`/Canteens?username=${FormData.username}&email=username@gmail.com`);
     }else{
       alert("incorrect crenditials")
         setError('wrong username or password .please try again')
